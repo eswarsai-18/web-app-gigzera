@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Analyst Profile</title>
+    <link rel="stylesheet" href="/Css/GigzeraUserProfile.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span>Gigzera</span>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search jobs by skills or category...">
+        </div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Jobs</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Industries</a>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Container -->
+        <div class="left-container">
+            <h1>Business Analyst</h1>
+
+            <!-- Professional Summary -->
+            <div class="section">
+                <h2>Professional Summary</h2>
+                <div class="editable-box" id="professional-summary">
+                    <div class="edit-btn-container">
+                        <button class="small-btn edit-btn" onclick="editSection('professional-summary')">✏</button>
+                    </div>
+                    <p id="summary-text">Results-oriented Business Analyst with 5+ years of experience in [industry]. Skilled in process improvement, data analysis, and requirements gathering. Proven ability to bridge the gap between business and IT.</p>
+                    <textarea id="summary-input" style="display:none;" rows="4" cols="50"></textarea>
+                    <button id="save-summary" style="display:none;" onclick="saveSummary()">Save</button>
+                </div>
+            </div>
+
+            <!-- Portfolio -->
+            <div class="section">
+                <h2>Portfolio</h2>
+                <div class="editable-box" id="portfolio">
+                    <div class="upload-area" id="upload-area">
+                        <p>Drag and drop files here</p>
+                        <input type="file" id="file-input" style="display:none;" onchange="handleFileSelect(event)">
+                        <div id="file-display"></div>
+                    </div>
+                    <div class="file-buttons">
+                        <span class="browse-btn" onclick="document.getElementById('file-input').click();">Browse Files</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="section">
+                <h2>Skills</h2>
+                <div class="editable-box" id="skills">
+                    <p>Data Analysis ✖ | Project Management ✖</p>
+                    <button class="small-btn edit-btn" onclick="editSection('skills')">✏ Edit</button>
+                </div>
+                <div class="skills-search">
+                    <input type="text" placeholder="Add a skill...">
+                    <button class="add-btn">Add Skill</button>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="section">
+                <h2>Certifications</h2>
+                <div class="box-container" id="certifications">
+                    <div class="box">
+                        <div class="content">
+                            <h3>PMP Certification</h3>
+                            <p>Project Management Institute | 2025</p>
+                        </div>
+                        <div class="actions">
+                            <button class="edit-btn" onclick="editItem(this)">✏</button>
+                            <button class="delete-btn" onclick="deleteItem(this)">🗑</button>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="location.href='/Html/addcertificate.html'" class="add-btn">+ Add Certification</button>
+            </div>
+
+            <!-- Employment History -->
+            <div class="section">
+                <h2>Employment History</h2>
+                <div class="box-container" id="employment">
+                    <div class="box">
+                        <div class="content">
+                            <h3>Senior Business Analyst</h3>
+                            <p><strong>Tech Solutions Inc.</strong> | 2023 - Present</p>
+                            <p>Led cross-functional teams in implementing business solutions and improving operational efficiency.</p>
+                        </div>
+                        <div class="actions">
+                            <button class="edit-btn" onclick="editItem(this)">✏</button>
+                            <button class="delete-btn" onclick="deleteItem(this)">🗑</button>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="location.href='/Html/GigzeraJobHistoryPop-up.html'" class="add-btn">+ Add Experience</button>
+            </div>
+        </div>
+
+        <!-- Right Container -->
+        <div class="right-container">
+            <div class="profile-card">
+                <!-- Profile Image Section -->
+                <div class="profile-img-container">
+                    <input type="file" id="profile-img-input" style="display: none;" onchange="updateProfileImage(event)">
+                    <img src="https://via.placeholder.com/80" alt="Profile Picture" class="profile-img" id="profile-img" onclick="document.getElementById('profile-img-input').click();">
+                </div>
+                <h3>John Doe</h3>
+                <p>Senior Business Analyst</p>
+                <p><a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
+                <p>+1 (555) 123-4567</p>
+                <div class="rating">
+                    ⭐⭐⭐⭐☆ <span>4.0 (24 reviews)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let uploadedFile = null;
+
+        // Function to handle file selection for portfolio
+        function handleFileSelect(event) {
+            const fileInput = event.target;
+            const file = fileInput.files[0]; // Get the first file from the input
+            if (file) {
+                if (uploadedFile) {
+                    alert("You can only upload one file.");
+                    return;
+                }
+                uploadedFile = file;
+
+                // Get the file size
+                const fileSize = (file.size / 1024).toFixed(2); // Size in KB
+
+                // Display the uploaded file name, size, and a delete button
+                const fileDisplay = document.getElementById('file-display');
+                const fileInfo = document.createElement('div');
+                fileInfo.classList.add('file-info');
+                fileInfo.innerHTML = `
+                    <span class="file-name">${file.name}</span>
+                    <span class="file-size">${fileSize} KB</span>
+                    <span class="delete-btn" onclick="deleteFile()">❌</span>
+                `;
+                fileDisplay.appendChild(fileInfo);
+
+                // Hide the browse button after file upload
+                document.querySelector('.browse-btn').style.display = 'none';
+            }
+        }
+
+        // Function to delete the uploaded file
+        function deleteFile() {
+            uploadedFile = null;
+            document.getElementById('file-display').innerHTML = ''; // Clear the displayed file info
+            document.querySelector('.browse-btn').style.display = 'inline-block'; // Show the browse button again
+            document.getElementById('file-input').value = ''; // Reset the file input
+        }
+
+        // Function to update profile image
+        function updateProfileImage(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profile-img').src = e.target.result; // Set the profile image to the uploaded file
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Function to edit Professional Summary section
+        function editSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const textElement = section.querySelector('p');
+            const textarea = section.querySelector('textarea');
+            const saveButton = section.querySelector('#save-summary');
+
+            // Hide the paragraph and show the textarea and save button
+            textElement.style.display = 'none';
+            textarea.style.display = 'block';
+            saveButton.style.display = 'block';
+            textarea.value = textElement.innerText;
+        }
+
+        // Function to save changes in Professional Summary
+        function saveSummary() {
+            const summaryInput = document.getElementById('summary-input');
+            const summaryText = document.getElementById('summary-text');
+            const saveButton = document.getElementById('save-summary');
+
+            // Save the new value and update the display
+            summaryText.innerText = summaryInput.value;
+
+            // Hide the textarea and save button, show the updated paragraph
+            summaryInput.style.display = 'none';
+            saveButton.style.display = 'none';
+            summaryText.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

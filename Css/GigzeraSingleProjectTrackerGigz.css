@@ -1,0 +1,184 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Sidebar Section */
+  .sidebar {
+    background: #ffffff;
+    padding: 20px;
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .opp-id {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .sidebar h3 {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .sidebar p,
+  .sidebar ul {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .budget {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  /* Main Content Section */
+  .project-header {
+    margin-bottom: 20px;
+  }
+  
+  .project-header p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .progress-bar {
+    background: #e0e0e0;
+    height: 8px;
+    border-radius: 4px;
+    margin: 10px 0;
+  }
+  
+  .progress {
+    background: #007bff;
+    height: 100%;
+    border-radius: 4px;
+  }
+  
+  .tasks {
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+  }
+  
+  .add-task-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .task {
+    margin-bottom: 15px;
+  }
+  
+  .task label {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  
+  .task textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .task-status {
+    float: right;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  
+  .in-progress {
+    background: #ffc107;
+  }
+  
+  .completed {
+    background: #28a745;
+  }
+  
+  /* Messages Section */
+  .messages {
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+  }
+  
+  .reply {
+    text-align: right;
+  }
+  
+  .message p {
+    background: #e1f5fe;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .reply p {
+    background: #c8e6c9;
+  }
+  
+  .time {
+    display: block;
+    font-size: 12px;
+    color: #555;
+    margin-top: 4px;
+  }
+  
+  .input-box input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  

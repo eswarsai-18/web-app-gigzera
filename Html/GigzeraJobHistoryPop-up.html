@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Work History</title>
+    <link rel="stylesheet" href="/Css/GigzeraJobHistoryPop-up.css" />
+  </head>
+  <body>
+    <!-- Popup Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>Add Work History</h2>
+        </div>
+        <div class="modal-body">
+          <form id="workHistoryForm">
+            <!-- Company and Title -->
+            <div class="form-row">
+              <div class="form-group">
+                <label>Company <span>*</span></label>
+                <input
+                  type="text"
+                  id="company"
+                  placeholder="Enter company name..."
+                />
+              </div>
+              <div class="form-group">
+                <label>Title <span>*</span></label>
+                <input
+                  type="text"
+                  id="title"
+                  placeholder="Enter your job title..."
+                />
+              </div>
+            </div>
+
+            <!-- City and Country -->
+            <div class="form-row">
+              <div class="form-group">
+                <label>City <span>*</span></label>
+                <input type="text" id="city" placeholder="Enter city name..." />
+              </div>
+              <div class="form-group">
+                <label>Country <span>*</span></label>
+                <input
+                  type="text"
+                  id="country"
+                  placeholder="Enter country name..."
+                />
+              </div>
+            </div>
+
+            <!-- Worked From and Worked Till -->
+            <div class="form-row">
+              <div class="form-group">
+                <label>Worked From <span>*</span></label>
+                <input type="date" id="workedFrom" />
+              </div>
+              <div class="form-group">
+                <label>Worked Till <span>*</span></label>
+                <input type="date" id="workedTill" />
+              </div>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="form-row checkbox-row">
+              <input type="checkbox" id="currentlyWorking" />
+              <label for="currentlyWorking">I currently work here</label>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+              <label>Description</label>
+              <textarea
+                id="description"
+                placeholder="Describe your role and key accomplishments..."
+              ></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="cancel-btn" id="cancelBtn">Cancel</button>
+          <button class="save-btn" id="saveBtn">Save Changes</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/Script/GigzeraJobHistoryPop-up.js"></script>
+  </body>
+</html>

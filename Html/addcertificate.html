@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Certification</title>
+    <link rel="stylesheet" href="/Css/addcertificate.css">
+</head>
+<body>
+    <!-- Centered Modal -->
+    <div class="modal-container">
+        <div class="modal">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h2>Add Certification</h2>
+                <!-- <span class="close">&times;</span> -->
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <!-- File Upload Section -->
+                <div class="file-upload">
+                    <div class="upload-area">
+                        <span class="upload-icon">&#8682;</span>
+                        <p>Drag and drop your certificate here</p>
+                        <p class="support">Supported formats: PDF, PNG, JPG</p>
+                        <button class="browse-btn" onclick="document.getElementById('file-input').click()">Browse Files</button>
+                        <input type="file" id="file-input" accept=".pdf, .png, .jpg" hidden>
+                    </div>
+                    <!-- Display Uploaded File -->
+                    <div class="uploaded-file" id="uploaded-file" style="display: none;">
+                        <p><span class="file-icon">&#128462;</span> <span id="file-name">File Name</span></p>
+                        <span id="file-size" class="file-size">File Size</span>
+                        <span class="remove" onclick="removeFile()">&times;</span>
+                    </div>
+                </div>
+
+                <!-- Form Section -->
+                <form class="certification-form">
+                    <!-- <label>Issue Date <span>*</span></label> -->
+
+                    <label for="issue-date">Issue Date  <span>*</span> </label>
+                    <input type="date" id="issue-date" required>
+
+                    <label for="expiry-date">Expiry Date</label>
+                    <input type="date" id="expiry-date">
+
+                    <label for="certification-id">Certification ID</label>
+                    <input type="text" id="certification-id" placeholder="Enter Certification ID (if applicable)">
+
+                    <label for="certification-url">Certification URL</label>
+                    <input type="text" id="certification-url" placeholder="Enter Certification URL (if applicable)">
+                </form>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button class="cancel-btn">Cancel</button>
+                <button class="save-btn">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const fileInput = document.getElementById('file-input');
+        const uploadedFile = document.getElementById('uploaded-file');
+        const fileNameSpan = document.getElementById('file-name');
+        const fileSizeSpan = document.getElementById('file-size');
+
+        fileInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                fileNameSpan.textContent = file.name;
+                fileSizeSpan.textContent = (file.size / 1024).toFixed(2) + ' KB';
+                uploadedFile.style.display = 'flex';
+            }
+        });
+
+        function removeFile() {
+            fileInput.value = '';
+            uploadedFile.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
