@@ -1,0 +1,262 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .search-bar {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.header .search-bar input {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: white;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-container {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.box {
+    background-color: #f4f6f8;
+    border: 1px solid #ddd;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+.small-btn {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 5px 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.small-btn.delete-btn {
+    background-color: #ff4d4d;
+}
+
+.add-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Right Container */
+.right-container {
+    flex: 1;
+}
+
+.profile-card {
+    background: #f4f6f8;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.profile-img-container {
+    position: relative;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.profile-img:hover {
+    opacity: 0.7;
+}
+
+.profile-img-input {
+    display: none;
+}
+
+/* Editable Box Styling */
+.editable-box {
+    background-color: #f4f6f8;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Edit Button Container */
+.edit-btn-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.edit-btn {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 5px 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background-color: transparent;
+    color: #007bff;
+}
+
+/* Portfolio Section */
+.upload-area {
+    background-color: #f4f6f8;
+    border: 2px dashed #007bff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+    min-height: 150px;
+    cursor: pointer;
+}
+
+.upload-area.drag-over {
+    border-color: #0056b3;
+}
+
+.upload-area p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.file-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.file-buttons .browse-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.file-buttons .browse-btn:hover {
+    background-color: #0056b3;
+}
+
+#file-display {
+    margin-top: 20px;
+}
+
+.file-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f6f8;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.file-name {
+    font-weight: bold;
+}
+
+.file-size {
+    color: #666;
+}
+
+.delete-btn {
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    color: #ff4d4d;
+}
+
+/* Certifications and Employment History Buttons */
+.edit-btn, .delete-btn {
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    color: #007bff;
+}
