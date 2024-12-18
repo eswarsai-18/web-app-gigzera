@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Sidebar</title>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        overflow-x: hidden;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        color: #fff;
+        padding: 1rem 2rem;
+      }
+
+      .navbar a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 1rem;
+      }
+
+      .navbar a:hover {
+        color: #f4a261;
+      }
+
+      /* Sidebar */
+      .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 999;
+        backdrop-filter: blur(3px);
+      }
+
+      .sidebar {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 400px;
+        height: 100%;
+        background: #fff;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease-in-out;
+        overflow-y: auto;
+        z-index: 1000;
+        padding: 1rem;
+      }
+
+      .sidebar.open {
+        right: 0;
+      }
+
+      .sidebar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0.5rem;
+      }
+
+      .sidebar-header h2 {
+        margin: 0;
+      }
+
+      .close-btn {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .send-btn {
+        display: block;
+        width: 100%;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 0.75rem;
+        margin-top: 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .send-btn:hover {
+        background-color: #0056b3;
+      }
+
+      @media (max-width: 768px) {
+        .sidebar {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="logo">Gigzera</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#" id="openSidebar">Contact Us</a>
+      </nav>
+    </div>
+
+    <!-- Sidebar and Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>Contact Us</h2>
+        <button class="close-btn" id="closeSidebar">&times;</button>
+      </div>
+      <form>
+        <label>Name</label>
+        <input type="text" class="form-input" placeholder="Enter your name" />
+
+        <label>User ID/Phone Number</label>
+        <input
+          type="text"
+          class="form-input"
+          placeholder="Enter your ID or phone number"
+        />
+
+        <label>Reason</label>
+        <select class="form-input">
+          <option value="">Select a reason</option>
+          <option value="technical">Technical Support</option>
+          <option value="billing">Billing Issue</option>
+          <option value="account">Account Management</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label>Description</label>
+        <textarea
+          rows="4"
+          class="form-input"
+          placeholder="Describe your concern in detail"
+        ></textarea>
+
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+    </div>
+
+    <script>
+      const openSidebar = document.getElementById("openSidebar");
+      const sidebar = document.getElementById("sidebar");
+      const closeSidebar = document.getElementById("closeSidebar");
+      const sidebarOverlay = document.getElementById("sidebarOverlay");
+
+      // Open sidebar
+      openSidebar.addEventListener("click", () => {
+        sidebar.classList.add("open");
+        sidebarOverlay.style.display = "block";
+      });
+
+      // Close sidebar
+      const closeSidebarHandler = () => {
+        sidebar.classList.remove("open");
+        sidebarOverlay.style.display = "none";
+      };
+
+      closeSidebar.addEventListener("click", closeSidebarHandler);
+      sidebarOverlay.addEventListener("click", closeSidebarHandler);
+    </script>
+  </body>
+</html>

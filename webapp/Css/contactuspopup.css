@@ -1,0 +1,139 @@
+/*
+/* General styles */  
+body {  
+    font-family: "Arial", sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    line-height: 1.6;  
+}  
+
+.container {  
+    max-width: 1200px;  
+    margin: auto;  
+    padding: 0 1rem;  
+}  
+
+.header {  
+    background-color: #F9FAFB;  
+    padding: 20px 40px;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+}  
+
+.navbar {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+}  
+
+.logo {  
+    font-size: 24px;  
+    font-weight: bold;  
+    color: #0066FF;  
+}  
+
+.nav-links {  
+    display: flex;  
+    align-items: center;  
+    gap: 15px;  
+}  
+
+.nav-links a {  
+    text-decoration: none;  
+    color: #333;  
+    font-weight: bold;  
+    font-size: 14px;  
+    transition: color 0.3s ease;  
+}  
+
+.nav-links a:hover {  
+    color: #0066FF;  
+}  
+
+.contact-btn {  
+    background-color: #007bff;  
+    color: white;  
+    border: none;  
+    padding: 10px 15px;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    transition: background-color 0.3s;  
+}  
+
+.contact-btn:hover {  
+    background-color: #0056b3;  
+}  
+
+/* Popup styles */  
+.popup-container {  
+    display: none; /* Hidden by default */  
+    position: fixed;  
+    top: 0;  
+    right: 0;  
+    width: 400px;  
+    height: 100%;  
+    background-color: white;  
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);  
+    z-index: 1000; /* Ensure it is above other content */  
+    padding: 20px;  
+    overflow-y: auto;  
+}  
+
+.popup-header {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+}  
+
+.close-button {  
+    background: none;  
+    border: none;  
+    cursor: pointer;  
+    color: #555;  
+}  
+
+/* Image in Popup */  
+.popup-image {  
+    width: 100%;  
+    height: auto;  
+    margin-top: 1rem; /* Optional, for top spacing */  
+    margin-bottom: 1rem; /* Space below image */  
+}  
+
+/* Address below image */  
+.address {  
+    margin-top: 1rem; /* Adds space above the address */  
+    text-align: center;  
+    font-size: 14px; /* Font size for address */  
+    color: #555; /* Optional color for the address text */  
+}  
+
+/* Form input styles */  
+.form-input {  
+    width: 100%;  
+    padding: 0.75rem;  
+    border-radius: 0.5rem;  
+    border: 1px solid #d1d5db;  
+    transition: border-color 0.2s, box-shadow 0.2s;  
+    margin-bottom: 1rem;  
+}  
+
+.form-input:focus {  
+    outline: none;  
+    border-color: #3b82f6;  
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);  
+}  
+
+.send-button {  
+    width: 100%;  
+    background-color: #3b82f6;  
+    color: white;  
+    padding: 1rem;  
+    border: none;  
+    border-radius: 0.5rem;  
+    cursor: pointer;  
+    transition: background-color 0.2s;  
+}  
+
+.send-button:hover {  
+    background-color: #2563eb;  
+} 

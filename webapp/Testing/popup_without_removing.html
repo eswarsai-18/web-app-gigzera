@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop-up and Sidebar Example</title>
+    <style>
+      /* Main body content */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Pop-up Modal */
+      .popup {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1001; /* Above the overlay */
+        width: 300px;
+        background-color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      /* Background Overlay */
+      .overlay {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        z-index: 1000; /* Below the popup */
+      }
+
+      /* Button to close pop-up */
+      .close-btn {
+        float: right;
+        cursor: pointer;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Welcome to the Page</h1>
+      <button onclick="showPopup()">Open Pop-up</button>
+    </div>
+
+    <!-- Background Overlay -->
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+    <!-- Pop-up Content -->
+    <div class="popup" id="popup">
+      <span class="close-btn" onclick="closePopup()">×</span>
+      <h2>Pop-up Title</h2>
+      <p>This is the content of the pop-up!</p>
+    </div>
+
+    <script>
+      function showPopup() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+      }
+
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

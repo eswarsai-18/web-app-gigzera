@@ -1,0 +1,185 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Overlay Background */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Popup */
+.popup {
+    height: 100%;
+    width: 600px;
+    background-color: #fff;
+    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Header */
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    color: #0073ff;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.brand-title {
+    color: #0073ff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #666;
+}
+
+/* Content */
+.popup-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.content-wrapper h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+  
+.requirements {  
+    list-style: none; /* Remove default list style */  
+    padding-left: 0; /* Remove left padding */  
+}  
+
+.requirements li {  
+    position: relative; /* Allow positioning of the tick */  
+    margin-bottom: 10px; /* Space between bullet points */  
+    padding-left: 25px; /* Space for the tick */  
+}  
+
+.requirements li::before {  
+    content: '\2713'; /* Unicode for check mark */  
+    color: green; /* Color for the tick */  
+    position: absolute; /* Position it before the text */  
+    left: 0; /* Align to the left of the list item */  
+    font-size: 16px; /* Size of the tick */  
+}
+
+
+.job-title {  
+    display: flex; /* Use flexbox for layout */  
+    justify-content: space-between; /* Space between title and salary */  
+    align-items: center; /* Center items vertically */  
+}  
+
+.job-title h1 {  
+    font-size: 1.5rem; /* Decrease font size for the title */  
+    margin: 0; /* Remove default margin */  
+    flex: 1; /* Allow the title to take available space */  
+}  
+
+.salary-box {  
+    font-size: 1rem; /* Adjust font size for salary */  
+    font-weight: bold; /* Make the salary bold */  
+    color: #0073ff; /* Color for the salary */  
+    background-color: #f0f8ff; /* Light blue background */  
+    padding: 8px 12px; /* Add padding for spacing */  
+    border-radius: 5px; /* Rounded corners */  
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */  
+    margin-left: 10px; /* Space between title and salary */  
+}
+
+.job-section {
+    margin-top: 20px;
+}
+
+.job-section h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.job-section p,
+.job-section ul {
+    color: #555;
+    line-height: 1.6;
+}
+
+.job-section ul {
+    list-style: none;
+}
+
+
+.job-section ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.job-section ul li i {
+    margin-right: 10px;
+    color: #0073ff;
+}
+
+.skills-box span {
+    display: inline-block;
+    background: #eaf2ff;
+    color: #0073ff;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.popup-footer {
+    padding: 20px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #fff;
+}
+
+.apply-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.apply-btn:hover {
+    background: linear-gradient(to right, #5a0fab, #1d6dfb);
+}
