@@ -1,111 +1,374 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+/* General Reset */  
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+    font-family: Arial, sans-serif;  
+}  
 
-body {
-    background-color: #f9f9f9;
-}
+body {  
+    background-color: #f9f9f9;  
+}  
 
-/* Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-}
+/* Header */  
+.header {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding: 10px 20px;  
+    background-color: #333;  
+    color: white;  
+}  
 
-.header .logo {
-    font-size: 24px;
-    font-weight: bold;
-}
+.header .logo {  
+    font-size: 24px;  
+    font-weight: bold;  
+}  
 
-.header .search-bar {
-    flex: 1;
-    margin-right: 20px;
-}
+.header .search-bar {  
+    flex: 1;  
+    margin-right: 20px;  
+}  
 
-.header .search-bar input {
-    width: 300px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+.header .search-bar input {  
+    width: 300px;  
+    padding: 8px;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+}  
 
-.nav-links a {
-    text-decoration: none;
-    margin-left: 20px;
-    color: white;
-}
+.nav-links a {  
+    text-decoration: none;  
+    margin-left: 20px;  
+    color: white;  
+}  
 
-.nav-links a:hover {
-    color: #007bff;
-}
+.nav-links a:hover {  
+    color: #007bff;  
+}  
 
-/* Main Container */
-.main-container {
-    display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+/* Button Styling */  
+.project-tracking-btn {  
+    background-color: #007bff; /* Blue background */  
+    color: white;  
+    border: none;  
+    padding: 8px 15px;  
+    font-size: 14px;  
+    cursor: pointer;  
+    border-radius: 4px;  
+    margin-left: 10px;  
+    display: inline-flex;  
+    align-items: center;  
+    justify-content: center;  
+}  
 
-.left-container {
-    flex: 2;
-    margin-right: 20px;
-}
+.project-tracking-btn i {  
+    margin-right: 5px; /* Space between icon and text */  
+}  
 
+.project-tracking-btn:hover {  
+    background-color: #0056b3; /* Darker blue on hover */  
+}  
+
+/* Adjusting Heading */  
+h1 {  
+    display: flex;  
+    align-items: center;  
+    justify-content: space-between;  
+}  
+
+/* Main Container */  
+.main-container {  
+    display: flex;  
+    max-width: 1200px;  
+    margin: 20px auto;  
+    background-color: #fff;  
+    padding: 20px;  
+    border-radius: 8px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+}  
+
+.left-container {  
+    flex: 2;  
+    margin-right: 20px;  
+}  
+/* skills section */
 .section {
     margin-bottom: 30px;
 }
 
-h1, h2 {
-    margin-bottom: 10px;
-}
-
-.box-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.box {
-    background-color: #f4f6f8;
-    border: 1px solid #ddd;
+.editable-box {
+    background-color: #f4f6f8; /* Light background */
     padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
-.actions {
+.skills-list {
     display: flex;
-    gap: 5px;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between skill boxes */
+    margin-bottom: 10px; /* Space below skill list */
 }
 
-.small-btn {
-    background-color: transparent;
+.skill-box {
+    background-color: #e3f2fd; /* Light blue background */
+    color: #1e88e5; /* Text color */
+    padding: 5px 10px; /* Padding for skill */
+    border-radius: 20px; /* Rounded corners */
+    display: flex; /* Flexbox for icon alignment */
+    align-items: center; /* Center align icon */
+}
+
+.delete-skill {
+    margin-left: 5px; /* Space between skill text and delete icon */
+    color: #0056b3; /* Dark blue color for delete icon */
+    cursor: pointer; /* Pointer cursor for interaction */
+    font-size: 12px; /* Smaller font size */
+}
+
+.delete-skill:hover {
+    color: #003d7a; /* Darker blue on hover */
+}
+
+.skills-search {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center align items vertically */
+    margin-top: 10px;
+    position: relative; /* Position relative for suggestions positioning */
+}
+
+.skills-search input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #555; /* Light black border color */
+    border-radius: 4px;
+    height: 40px;
+    outline: none;
+    background-color: #fff;
     color: black;
-    border: none;
-    padding: 5px 8px;
-    font-size: 12px;
+    box-shadow: 0 0 0 2px white; /* Slight shadow */
+    width: 51%; /* Ensures input takes 53% of the available space */
+}
+
+.skills-search input[type="text"]::placeholder {
+    color: #333; /* Dark black color for placeholder text */
+}
+
+.suggestions-box {
+    border: 1px solid #ccc; /* Border for suggestions */
+    border-radius: 4px; /* Rounded corners */
+    max-height: 150px; /* Maximum height for dropdown */
+    overflow-y: auto; /* Scroll if too many suggestions */
+    position: absolute; /* Position it below the input */
+    background-color: white; /* Background color */
+    z-index: 1000; /* Ensure it appears above other elements */
+    width: calc(51% - 22px); /* Match input width, accounting for padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.suggestion-item {
+    padding: 10px; /* Padding for each suggestion */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.2s ease; /* Smooth transition for background color */
+}
+
+.suggestion-item:hover {
+    background-color: #e3f2fd; /* Highlight color on hover */
+}
+
+
+.add-btn {  
+    background-color: #007bff; /* Blue background for button */  
+    color: white; /* Text color */  
+    padding: 10px 15px; /* Adjusted padding */  
+    border: none; /* No border */  
+    border-radius: 4px; /* Rounded corners */  
+    cursor: pointer; /* Pointer cursor */  
+    margin-left: 10px; /* Space between input and button */  
+    height: 40px; /* Match input height */  
+}  
+
+.add-btn:hover {  
+    background-color: #0056b3; /* Darker blue on hover */  
+}
+
+
+/* certificate */
+.box-container {  
+    display: flex;  
+    flex-direction: column;  
+    gap: 15px;  
+}  
+
+.box {  
+    background-color: #f4f6f8;  
+    border: 1px solid #ddd;  
+    padding: 15px;  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    border-radius: 5px;  
+}  
+
+.actions {  
+    display: flex;  
+    gap: 5px;  
+}  
+
+.small-btn {  
+    background-color: transparent;  
+    color: black;  
+    border: none;  
+    padding: 5px 8px;  
+    font-size: 12px;  
+    cursor: pointer;  
+}  
+
+.small-btn.delete-btn {  
+    background-color: #ff4d4d;  
+}  
+
+.add-btn {  
+    background-color: #007bff; /* Blue background for button */  
+    color: white; /* Text color */  
+    padding: 10px 15px; /* Adjusted padding */  
+    border: none; /* No border */  
+    border-radius: 4px; /* Rounded corners */  
+    cursor: pointer; /* Pointer cursor */  
+    margin-left: 10px; /* Space between input and button */  
+    height: 40px; /* Match input height */  
+}  
+
+.add-btn:hover {  
+    background-color: #0056b3; /* Darker blue on hover */  
+}  
+
+/* heading  */  
+h1, h2 {  
+    margin-bottom: 10px;  
+}
+
+/* Right Container */
+.right-container {
+    flex: 1;
+}
+
+/* Profile Card */
+.profile-card {
+    background: #f4f6f8;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative; /* For positioning the dots menu */
+}
+
+/* Profile Header - Profile Image and Name/Job Title Side by Side */
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Profile Image */
+.profile-img-container {
+    margin-right: 20px;
+    position: relative;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
     cursor: pointer;
 }
 
-.small-btn.delete-btn {
-    background-color: #ff4d4d;
+.profile-img:hover {
+    opacity: 0.7;
 }
 
-.add-btn {
+/* Profile Name and Job Title */
+.profile-details {
+    text-align: left;
+}
+
+.profile-details h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.profile-details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Profile Contact Information */
+.profile-contact {
+    text-align: left;
+}
+
+.profile-contact p {
+    margin: 5px 0;
+}
+
+/* Rating Section */
+.rating {
+    margin-top: 10px;
+}
+
+.stars {
+    display: flex;
+    justify-content: left;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.stars .star {
+    margin-right: 5px;
+    color: #ddd;
+}
+
+/* Full star */
+.stars .star.selected {
+    color: #ffbf00;
+}
+
+/* Half star */
+.stars .star.half {
+    color: #ffdf00;
+}
+
+/* Hover effect for rating stars */
+.stars .star:hover {
+    color: #ffbf00;
+}
+
+/* Three Dots Menu - for Edit Profile */
+.dots-menu {
+    position: absolute;
+    top: 10px; /* Adjust position for better visibility */
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px; /* Increased size for better visibility */
+    color: black; /* Set color to black */
+}
+
+.dots-menu:hover {
+    color: #555; /* Slightly lighter color on hover */
+}
+
+/* Edit Profile Form for Name, Job Title, and Contact Details */
+#edit-profile-form input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Save Button */
+.save-btn {
     background-color: #007bff;
     color: white;
     padding: 8px 12px;
@@ -115,35 +378,8 @@ h1, h2 {
     margin-top: 10px;
 }
 
-/* Right Container */
-.right-container {
-    flex: 1;
-}
-
-.profile-card {
-    background: #f4f6f8;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.profile-img-container {
-    position: relative;
-}
-
-.profile-img {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-}
-
-.profile-img:hover {
-    opacity: 0.7;
-}
-
-.profile-img-input {
-    display: none;
+.save-btn:hover {
+    background-color: #0056b3;
 }
 
 /* Editable Box Styling */
@@ -152,41 +388,74 @@ h1, h2 {
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 20px;
-    position: relative;
 }
 
-/* Edit Button Container */
-.edit-btn-container {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+/* Hidden file input for image upload */
+.profile-img-input {
+    display: none;
 }
 
-.edit-btn {
-    background-color: transparent;
-    color: black;
+/* Edit Profile Form Styling (Hidden by default) */
+#edit-profile-form {
+    display: none;
+    background-color: #f4f6f8;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#edit-profile-form input {
+    margin-bottom: 15px;
+}
+
+#edit-profile-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#edit-profile-form .edit-section {
+    margin-bottom: 20px;
+}
+
+/* Save Button inside Edit Profile Form */
+#save-summary {
+    background-color: #007bff; /* Blue background */
+    padding: 5px 15px;
     border: none;
-    padding: 5px 8px;
-    font-size: 12px;
-    cursor: pointer;
+    color: white;
+    border-radius: 4px;
+    margin-top: 10px;
+    float: right; /* Align to the right */
 }
 
-.edit-btn:hover {
-    background-color: transparent;
-    color: #007bff;
+#summary-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    display: block;
 }
+
+#summary-input::placeholder {
+    font-size: 18px;
+    color: #888;
+}
+
 
 /* Portfolio Section */
-.upload-area {
-    background-color: #f4f6f8;
-    border: 2px dashed #007bff;
-    padding: 30px;
-    text-align: center;
-    border-radius: 5px;
-    min-height: 150px;
-    cursor: pointer;
-}
-
+.upload-area {  
+    background-color: #f4f6f8; /* Light gray background */  
+    border: 2px dashed #555;   /* Set border to black and dashed */  
+    padding: 30px;  
+    text-align: center;  
+    border-radius: 5px;        /* Rounded corners */  
+    min-height: 150px;         /* Minimum height */  
+    cursor: pointer;  
+}  
 .upload-area.drag-over {
     border-color: #0056b3;
 }
@@ -197,24 +466,28 @@ h1, h2 {
     font-weight: bold;
 }
 
-.file-buttons {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-}
+.cloud-icon {  
+    font-size: 40px; /* Adjust size of the icon */  
+    margin-bottom: 10px; /* Space below the icon */  
+    color:#555;  /* Change icon color */  
+}  
 
-.file-buttons .browse-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
+.file-buttons {  
+    margin-top: 10px;  
+}  
 
-.file-buttons .browse-btn:hover {
-    background-color: #0056b3;
-}
+.file-buttons .browse-btn {  
+    background-color: #007bff;  
+    color: white;  
+    padding: 12px;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    display: inline-block;  
+}  
 
+.file-buttons .browse-btn:hover {  
+    background-color: #0056b3;  
+}  
 #file-display {
     margin-top: 20px;
 }

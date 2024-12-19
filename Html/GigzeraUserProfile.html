@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Analyst Profile</title>
     <link rel="stylesheet" href="/Css/GigzeraUserProfile.css">
-</head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
 <body>
     <!-- Header -->
     <header class="header">
@@ -16,11 +17,11 @@
             <input type="text" placeholder="Search jobs by skills or category...">
         </div>
         <nav class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Jobs</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Industries</a>
+            <a href="index.html">Home</a>
+                    <a href="/Html/applyforjob.html">Jobs</a>
+                    <a href="/Html/AboutUs.html">About Us</a>
+                    <a href="/Html/contactuspopup.html">Contact Us</a>
+                    <a href="Insturies.html">Industries</a>
         </nav>
     </header>
 
@@ -28,52 +29,61 @@
     <div class="main-container">
         <!-- Left Container -->
         <div class="left-container">
-            <h1>Business Analyst</h1>
+            <h1>
+                Business Analyst 
+                <button class="project-tracking-btn">
+                    <i class="fa-solid fa-chart-line"></i> Project Tracking
+                </button>
+            </h1>
 
-            <!-- Professional Summary -->
-            <div class="section">
-                <h2>Professional Summary</h2>
-                <div class="editable-box" id="professional-summary">
-                    <div class="edit-btn-container">
-                        <button class="small-btn edit-btn" onclick="editSection('professional-summary')">✏</button>
-                    </div>
-                    <p id="summary-text">Results-oriented Business Analyst with 5+ years of experience in [industry]. Skilled in process improvement, data analysis, and requirements gathering. Proven ability to bridge the gap between business and IT.</p>
-                    <textarea id="summary-input" style="display:none;" rows="4" cols="50"></textarea>
-                    <button id="save-summary" style="display:none;" onclick="saveSummary()">Save</button>
-                </div>
-            </div>
+       <!-- Professional Summary -->
+<div class="section">
+    <h2>Professional Summary</h2>
+    <div class="editable-box" id="professional-summary"><div class="edit-btn-container">
+            <button class="small-btn edit-btn" onclick="editSection('professional-summary')">✏</button>
+        </div>
+        <p id="summary-text">Results-oriented Business Analyst with 5+ years of experience in [industry]. Skilled in process improvement, data analysis, and requirements gathering. Proven ability to bridge the gap between business and IT.</p>
+        <textarea id="summary-input" style="display:none;" rows="4" cols="50" placeholder="Edit your professional summary here..."></textarea>
+        <button id="save-summary" style="display:none;" onclick="saveSummary()">Save</button>
+    </div>
+</div>
 
-            <!-- Portfolio -->
-            <div class="section">
-                <h2>Portfolio</h2>
-                <div class="editable-box" id="portfolio">
-                    <div class="upload-area" id="upload-area">
-                        <p>Drag and drop files here</p>
-                        <input type="file" id="file-input" style="display:none;" onchange="handleFileSelect(event)">
-                        <div id="file-display"></div>
-                    </div>
-                    <div class="file-buttons">
-                        <span class="browse-btn" onclick="document.getElementById('file-input').click();">Browse Files</span>
-                    </div>
-                </div>
-            </div>
+<!-- Portfolio -->  
+<div class="section">  
+    <h2>Portfolio</h2>  
+    <div class="editable-box" id="portfolio">  
+        <div class="upload-area" id="upload-area">  
+            <i class="fa-solid fa-cloud-arrow-up cloud-icon"></i> <!-- Icon above text -->  
+            <p>Drag and drop files here or</p>  
+            <div class="file-buttons">  
+                <span class="browse-btn" onclick="document.getElementById('file-input').click();">  
+                    <span>Browse Files</span>  
+                </span>  
+                <input type="file" id="file-input" style="display:none;" onchange="handleFileSelect(event)">  
+            </div>  
+            <div id="file-display"></div>  
+        </div>  
+    </div>  
+</div>
+<!-- Skills -->  
+<div class="section">  
+    <h2>Skills</h2>  
+    <div class="editable-box" id="skills">     <div class="skills-search">  
+        <input type="text" id="new-skill" placeholder="Add a skill..." oninput="filterSkills(event)" />    
+    </div>
+        <div id="suggestions" class="suggestions-box"></div>  
+   
+</div>
+        <div class="skills-list" id="skills-list">  
+            <!-- Skill boxes will be added here -->  
+        </div>  
+    </div>  
 
-            <!-- Skills -->
-            <div class="section">
-                <h2>Skills</h2>
-                <div class="editable-box" id="skills">
-                    <p>Data Analysis ✖ | Project Management ✖</p>
-                    <button class="small-btn edit-btn" onclick="editSection('skills')">✏ Edit</button>
-                </div>
-                <div class="skills-search">
-                    <input type="text" placeholder="Add a skill...">
-                    <button class="add-btn">Add Skill</button>
-                </div>
-            </div>
-
-            <!-- Certifications -->
+<!-- Certifications -->
             <div class="section">
                 <h2>Certifications</h2>
+                <button onclick="location.href='/Html/addcertificate.html'" class="add-btn">+ Add Certification</button>
+                 </div>
                 <div class="box-container" id="certifications">
                     <div class="box">
                         <div class="content">
@@ -81,17 +91,16 @@
                             <p>Project Management Institute | 2025</p>
                         </div>
                         <div class="actions">
-                            <button class="edit-btn" onclick="editItem(this)">✏</button>
-                            <button class="delete-btn" onclick="deleteItem(this)">🗑</button>
+                            <button class="edit-btn" onclick="editItem(this)">✏️</button>
+                            <button class="delete-btn" onclick="deleteItem(this)">🗑️</button>
                         </div>
                     </div>
                 </div>
-                <button onclick="location.href='/Html/addcertificate.html'" class="add-btn">+ Add Certification</button>
-            </div>
-
-            <!-- Employment History -->
+<!-- Employment History -->
             <div class="section">
                 <h2>Employment History</h2>
+                <button onclick="location.href='/Html/GigzeraJobHistoryPop-up.html'" class="add-btn">+ Add Experience</button>
+            </div>
                 <div class="box-container" id="employment">
                     <div class="box">
                         <div class="content">
@@ -100,39 +109,227 @@
                             <p>Led cross-functional teams in implementing business solutions and improving operational efficiency.</p>
                         </div>
                         <div class="actions">
-                            <button class="edit-btn" onclick="editItem(this)">✏</button>
-                            <button class="delete-btn" onclick="deleteItem(this)">🗑</button>
+                            <button class="edit-btn" onclick="editItem(this)">✏️</button>
+                            <button class="delete-btn" onclick="deleteItem(this)">🗑️</button>
                         </div>
                     </div>
                 </div>
-                <button onclick="location.href='/Html/GigzeraJobHistoryPop-up.html'" class="add-btn">+ Add Experience</button>
+        </div>
+<!-- Right Container -->
+<div class="right-container">
+    <div class="profile-card">
+        <!-- Profile Header: Profile Image, Name, and Job Title -->
+        <div class="profile-header">
+            <!-- Profile Image -->
+            <div class="profile-img-container">
+                <img id="profile-img" src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-img" onclick="editImage()">
+                <!-- Hidden file input for image upload -->
+                <input type="file" id="file-input" class="profile-img-input" accept="image/*" onchange="uploadImage()" style="display:none;">
+            </div>
+            <!-- Profile Name and Job Title -->
+            <div class="profile-details">
+                <h3 id="profile-name">John Doe</h3>
+                <p id="profile-job">Senior Business Analyst</p>
             </div>
         </div>
-
-        <!-- Right Container -->
-        <div class="right-container">
-            <div class="profile-card">
-                <!-- Profile Image Section -->
-                <div class="profile-img-container">
-                    <input type="file" id="profile-img-input" style="display: none;" onchange="updateProfileImage(event)">
-                    <img src="https://via.placeholder.com/80" alt="Profile Picture" class="profile-img" id="profile-img" onclick="document.getElementById('profile-img-input').click();">
-                </div>
-                <h3>John Doe</h3>
-                <p>Senior Business Analyst</p>
-                <p><a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
-                <p>+1 (555) 123-4567</p>
-                <div class="rating">
-                    ⭐⭐⭐⭐☆ <span>4.0 (24 reviews)</span>
-                </div>
+        <!-- Profile Contact Details (Email, Phone) -->
+        <div class="profile-contact">
+            <p id="profile-email">
+                <a href="mailto:john.doe@example.com">📧 john.doe@example.com</a>
+            </p>
+            <p id="profile-phone">📱 +1 (555) 123-4567</p>
+        </div>
+        
+        <!-- Rating Section -->
+        <div class="rating" id="rating-container">
+            <label>Rating: </label>
+            <div class="stars" id="star-rating">
+                <!-- Star Rating (Initial Rating) -->
+                <span class="star selected" data-value="1">&#9733;</span>
+                <span class="star selected" data-value="2">&#9733;</span>
+                <span class="star selected" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
             </div>
+            <span id="rating-points">(3.0 points)</span> <!-- Points display -->
+        </div>
+
+        <!-- Edit Button for Rating, Profile Image, and Other Fields -->
+        <div class="edit-btn-container">
+            <button class="small-btn edit-btn" onclick="enableEditing()">Edit <span>✏️</span></button>
         </div>
     </div>
+</div>
 
-    <script>
-        let uploadedFile = null;
+<!-- Edit Profile Form (Hidden by default) -->
+<div id="edit-profile-form" style="display: none;">
+    <div class="edit-section">
+        <!-- Editable Name and Job Title -->
+        <div>
+            <label>Edit Name:</label>
+            <input type="text" id="edit-name" value="John Doe">
+        </div>
+        <div>
+            <label>Edit Job Title:</label>
+            <input type="text" id="edit-job" value="Senior Business Analyst">
+        </div>
 
-        // Function to handle file selection for portfolio
-        function handleFileSelect(event) {
+        <!-- Editable Contact Information -->
+        <div>
+            <label>Edit Email:</label>
+            <input type="email" id="edit-email" value="john.doe@example.com">
+        </div>
+        <div>
+            <label>Edit Phone:</label>
+            <input type="text" id="edit-phone" value="+1 (555) 123-4567">
+        </div>
+
+        <!-- Editable Profile Image -->
+        <div>
+            <label>Upload New Image: </label>
+            <input type="file" id="file-input-edit" class="profile-img-input" accept="image/*" onchange="uploadImageEdit()">
+        </div>
+
+        <button class="small-btn save-btn" onclick="saveEdit()">Save</button>
+    </div>
+</div>
+
+<script>
+    let uploadedFile = null;
+
+// Enable editing of profile details, rating, and image
+function enableEditing() {
+    const form = document.getElementById('edit-profile-form');
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+    
+    // Pre-fill the form with current values
+    document.getElementById('edit-name').value = document.getElementById('profile-name').innerText;
+    document.getElementById('edit-job').value = document.getElementById('profile-job').innerText;
+    document.getElementById('edit-email').value = document.getElementById('profile-email').innerText.replace("📧 ", "");
+    document.getElementById('edit-phone').value = document.getElementById('profile-phone').innerText.replace("📱 ", "");
+
+    // Pre-fill the image (if available)
+    const currentImage = document.getElementById('profile-img').src;
+    document.getElementById('file-input-edit').setAttribute('data-current-img', currentImage);
+
+    // Set current rating in the edit form (set 3 stars to yellow)
+    updateRatingEdit(3);
+}
+
+// Save the edited profile details and rating
+function saveEdit() {
+    // Save the edited profile details
+    document.getElementById('profile-name').innerText = document.getElementById('edit-name').value;
+    document.getElementById('profile-job').innerText = document.getElementById('edit-job').value;
+    document.getElementById('profile-email').innerText = "📧 " + document.getElementById('edit-email').value;
+    document.getElementById('profile-phone').innerText = "📱 " + document.getElementById('edit-phone').value;
+
+    // Save the edited rating
+    const ratingValue = getSelectedRating('#star-rating-edit .star');
+    updateProfileRating(ratingValue);
+
+    // If a new image is uploaded, update the profile image
+    const fileInput = document.getElementById('file-input');
+    if (fileInput.files.length > 0) {
+        uploadImage();
+    }
+
+    // Hide the edit form after saving
+    document.getElementById('edit-profile-form').style.display = 'none';
+}
+
+// Function to upload the image
+function uploadImage() {
+    const fileInput = document.getElementById('file-input');
+    const file = fileInput.files[0];
+    
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            document.getElementById('profile-img').src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+}
+
+// Handle the image upload during editing
+function uploadImageEdit() {
+    const fileInputEdit = document.getElementById('file-input-edit');
+    const file = fileInputEdit.files[0];
+    
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            // Temporarily show the uploaded image on the profile during editing
+            document.getElementById('profile-img').src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+}
+
+// Rating click functionality for editing
+const stars = document.querySelectorAll('#star-rating-edit .star');
+stars.forEach(star => {
+    star.addEventListener('click', function() {
+        const ratingValue = parseFloat(this.getAttribute('data-value'));
+        updateRatingEdit(ratingValue);
+    });
+});
+
+// Function to update the rating in the edit section
+function updateRatingEdit(rating) {
+    const fullStars = Math.floor(rating);
+    const halfStar = rating % 1 >= 0.5;
+
+    // Remove previous ratings
+    stars.forEach(star => {
+        star.classList.remove('selected', 'half');
+    });
+
+    // Add full stars (3 yellow stars)
+    for (let i = 0; i < fullStars; i++) {
+        stars[i].classList.add('selected');
+    }
+
+    // Add half star if applicable
+    if (halfStar) {
+        stars[fullStars].classList.add('half');
+    }
+
+    // Update the points display for the edit section
+    document.getElementById('rating-points-edit').innerText = `(${rating.toFixed(1)} points)`;
+}
+
+// Function to get the selected rating value
+function getSelectedRating(selector) {
+    const selectedStars = document.querySelectorAll(`${selector}.selected`);
+    const halfStars = document.querySelectorAll(`${selector}.half`).length;
+    return selectedStars.length + (halfStars > 0 ? 0.5 : 0);
+}
+
+// Function to update the profile rating display after saving
+function updateProfileRating(rating) {
+    const starElements = document.querySelectorAll('#star-rating .star');
+    starElements.forEach(star => {
+        star.classList.remove('selected', 'half');
+    });
+
+    const fullStars = Math.floor(rating);
+    const halfStar = rating % 1 >= 0.5;
+
+    for (let i = 0; i < fullStars; i++) {
+        starElements[i].classList.add('selected');
+    }
+
+    if (halfStar) {
+        starElements[fullStars].classList.add('half');
+    }
+
+    document.getElementById('rating-points').innerText = `(${rating.toFixed(1)} points)`;
+}
+
+// Function to handle file selection for portfolio
+function handleFileSelect(event) {
             const fileInput = event.target;
             const file = fileInput.files[0]; // Get the first file from the input
             if (file) {
@@ -169,18 +366,7 @@
             document.getElementById('file-input').value = ''; // Reset the file input
         }
 
-        // Function to update profile image
-        function updateProfileImage(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById('profile-img').src = e.target.result; // Set the profile image to the uploaded file
-                };
-                reader.readAsDataURL(file);
-            }
-        }
-
+      
         // Function to edit Professional Summary section
         function editSection(sectionId) {
             const section = document.getElementById(sectionId);
@@ -191,7 +377,7 @@
             // Hide the paragraph and show the textarea and save button
             textElement.style.display = 'none';
             textarea.style.display = 'block';
-            saveButton.style.display = 'block';
+            saveButton.style.display = 'inline-block';
             textarea.value = textElement.innerText;
         }
 
@@ -209,6 +395,78 @@
             saveButton.style.display = 'none';
             summaryText.style.display = 'block';
         }
+
+  // Skills array
+const skills = [
+    "Adaptability", "Analytical thinking", "Artificial Intelligence", "Attention to detail",
+    "Automation", "Budget management", "Branding", "Business analysis",
+    "Business intelligence", "Bilingual communication", "Collaboration", "Communication",
+    "Conflict resolution", "Critical thinking", "Customer relationship management (CRM)",
+    "Data analysis", "Decision-making", "Digital marketing", "Diversity and inclusion",
+    "Debugging", "Emotional intelligence", "Event planning", "Editing and proofreading",
+    "Entrepreneurship", "E-commerce management", "Financial planning", "Front-end development",
+    "Facilitation skills", "Forecasting", "Flexibility", "Graphic design", "Goal setting",
+    "Growth hacking", "GIS (Geographic Information Systems)", "Grant writing", "HTML/CSS",
+    "Human resources", "Hiring and onboarding", "Help desk support", "HCI (Human-Computer Interaction)",
+    "Innovation", "Interpersonal skills", "Inventory management", "IT support", "Influencing skills",
+    "Java programming", "Journalism", "Job analysis", "Judgment and decision-making",
+    "JIRA proficiency", "Knowledge management", "Key performance indicators (KPIs)", "Kubernetes",
+    "Knowledge sharing", "Keynote presentations", "Leadership", "Logistics management", "Language proficiency",
+    "LinkedIn marketing", "Listening skills", "Marketing strategy", "Machine learning", "Multitasking",
+    "Mediation", "Microsoft Office skills", "Negotiation", "Networking", "Numerical analysis",
+    "NLP (Natural Language Processing)", "Needs assessment", "Organizational skills", "Online research",
+    "Operational efficiency", "Outreach strategies", "Optimization techniques", "Problem-solving",
+    "Project management", "Programming (e.g., Python, Java)", "Public speaking", "Presentation skills",
+    "Quality assurance", "Quantitative analysis", "QuickBooks proficiency", "Query handling",
+    "Quality control", "Risk management", "Report writing", "Research skills", "React.js development",
+    "Relationship building", "Strategic thinking", "Social media management", "Software development",
+    "Sales skills", "SQL proficiency", "Teamwork", "Time management", "Training and mentoring",
+    "Technical writing", "Troubleshooting", "User experience design (UX)", "Upselling techniques",
+    "Understanding market trends", "Unstructured data analysis", "User interface design (UI)",
+    "Video editing", "Visionary leadership", "Virtual event planning", "Vendor management",
+    "Voice-over skills", "Writing skills", "Workflow optimization", "Workplace safety training",
+    "Web development", "WordPress management", "XML knowledge", "XenApp expertise", "Xerox operations",
+    "Cross-functional collaboration", "Youth engagement", "YouTube content creation", "Yield management",
+    "Year-end reporting", "Yoga instruction", "Zero-based budgeting", "Zendesk proficiency",
+    "Zoning laws knowledge", "Zoology expertise", "Zeal for learning"
+];
+
+// Filter skills based on input
+function filterSkills(event) {
+    const input = event.target.value.toLowerCase();
+    const suggestionsBox = document.getElementById('suggestions');
+    suggestionsBox.innerHTML = '';
+
+    if (input.length < 1) return;
+
+    const filteredSkills = skills.filter(skill => skill.toLowerCase().includes(input));
+
+    filteredSkills.forEach(skill => {
+        const suggestionItem = document.createElement('div');
+        suggestionItem.className = 'suggestion-item';
+        suggestionItem.textContent = skill;
+        suggestionItem.onclick = () => selectSkill(skill);
+        suggestionsBox.appendChild(suggestionItem);
+    });
+}
+
+// Add selected skill to the list
+function selectSkill(skill) {
+    const skillsList = document.getElementById('skills-list');
+    const newSkill = document.createElement('span');
+    newSkill.className = 'skill-box';
+    newSkill.innerHTML = `${skill} <span class="delete-skill" onclick="removeSkill(this)">✖</span>`;
+    skillsList.appendChild(newSkill);
+
+    document.getElementById('new-skill').value = '';
+    document.getElementById('suggestions').innerHTML = '';
+}
+
+// Remove skill from the list
+function removeSkill(skillElement) {
+    skillElement.parentElement.remove();
+}
+
     </script>
 </body>
 </html>
