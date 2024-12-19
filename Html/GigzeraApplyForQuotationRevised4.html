@@ -54,28 +54,28 @@
         </div>
         <div class="task-list">
           <div class="task">
-            <input type="checkbox">
-            <label>Create wireframes</label>
-            <select>
-              <option>In Progress</option>
-              <option>Completed</option>
-              <option>Pending</option>
-            </select>
-            <div class="task-comment">
-              <textarea placeholder="Add a comment..."></textarea>
+            <div class="task-details">
+              <input type="checkbox">
+              <label>Create wireframes</label>
+              <select>
+                <option>In Progress</option>
+                <option>Completed</option>
+                <option>Pending</option>
+              </select>
             </div>
+            <textarea placeholder="Add a comment..."></textarea>
           </div>
           <div class="task">
-            <input type="checkbox">
-            <label>Design system setup</label>
-            <select>
-              <option>Completed</option>
-              <option>In Progress</option>
-              <option>Pending</option>
-            </select>
-            <div class="task-comment">
-              <textarea placeholder="Add a comment..."></textarea>
+            <div class="task-details">
+              <input type="checkbox">
+              <label>Design system setup</label>
+              <select>
+                <option>Completed</option>
+                <option>In Progress</option>
+                <option>Pending</option>
+              </select>
             </div>
+            <textarea placeholder="Add a comment..."></textarea>
           </div>
         </div>
       </div>
@@ -116,16 +116,16 @@
     const newTask = document.createElement('div');
     newTask.classList.add('task');
     newTask.innerHTML = `
-      <input type="checkbox">
-      <label>New Task</label>
-      <select>
-        <option>In Progress</option>
-        <option>Completed</option>
-        <option>Pending</option>
-      </select>
-      <div class="task-comment">
-        <textarea placeholder="Add a comment..."></textarea>
+      <div class="task-details">
+        <input type="checkbox">
+        <label>New Task</label>
+        <select>
+          <option>In Progress</option>
+          <option>Completed</option>
+          <option>Pending</option>
+        </select>
       </div>
+      <textarea placeholder="Add a comment..."></textarea>
     `;
     
     taskList.appendChild(newTask);
@@ -144,9 +144,9 @@
     // Focus the element if it's now editable
     if (!isEditable) {
       progressPercentage.focus();
-      editProgressIcon.src = "https://cdn.yellowmessenger.com/HikfSvbQtz281734613972035.png"; // Change icon to save (optional)
+      editProgressIcon.src = "save-icon.png"; // Change icon to save (optional)
     } else {
-      editProgressIcon.src = "https://cdn.yellowmessenger.com/QmrbaBppE7Tu1734614004804.png"; // Revert icon to edit
+      editProgressIcon.src = "edit-icon.png"; // Revert icon to edit
       // Validate and update the progress bar width
       const value = parseInt(progressPercentage.textContent.replace('%', '').trim());
       if (!isNaN(value) && value >= 0 && value <= 100) {
