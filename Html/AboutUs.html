@@ -1,185 +1,346 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Gigzera: About Us</title>  
-    <link rel="stylesheet" href="/Css/AboutUs.css">  
-</head>  
-<body>  
-    <main>  
-        <section class="about">  
-            <header>  
-                <!-- Header Section -->
-<header class="header">
-    <nav class="navbar">
-        <!-- Logo -->
-        <div class="logo">Gigzera</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gigzera: About Us</title>
+    <link rel="stylesheet" href="../Css/AboutUs.css" />
+  </head>
+  <body>
+    <main>
+      <section class="about">
+        <header class="header">
+          <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">Gigzera</div>
 
-        <!-- Search Bar -->
-        <div class="search-bar">
-            <input type="text" placeholder="Search jobs by skills or category..."
-            class="search-input" />
-            <button class="search-button">Search</button>
-
-        </div>
-        <!-- Navigation Links -->
-        <div class="nav-links">
-            <a href="/index.html">Home</a>
-            <a href="/Html/findajob.html">Jobs</a>
-            <a href="/Html/AboutUs.html">About Us</a>
-            <a href="/Html/contactuspopup.html">Contact Us</a>
-            <a href="/Html/Insturies.html">Industries</a>
-            
-            <button class="login-btn" onclick="window.location.href='./Html/login.html';">Login</button>
-            <button class="signup-btn" onclick="window.location.href='/Html/signup.html';">Sign Up</button>
-
-        </div>
-    </nav>
-</header>
-<div>
-
-
-    <section> 
-        <!-- <h1 style="font-size: 3.5rem; font-weight: bold; text-align: center; margin: 10px 0;">Gigzera: A Technology-Driven GigWorks Platform</h1> -->
-        <h3 style="font-size: 2rem; font-weight: bold; text-align: center; margin: 10px 0;">Gigzera: A Technology-Driven GigWorks Platform</h3>
-
-    </header>  
-            <p>
-                <p class="text-gray-600 text-lg">In the modern workforce, the traditional employment model is undergoing a transformation, largely driven by technological innovations. One of the most significant shifts in this evolution is the rise of gig work, where individuals take on short-term, flexible jobs facilitated through online platforms. Gigzera is one such technology-driven GigWorks platform, designed to connect businesses and individuals with a vast network of skilled freelancers for various tasks and projects.
-                    <p class="text-grey-600 text-lg">Gigzera operates as a dynamic marketplace, utilizing cutting-edge technology to provide businesses with access to freelancers across a wide array of industries. Through its mobile app and website, Gigzera enables users to find and hire talented professionals for projects ranging from software development and digital marketing to content creation and graphic design. Whether you're a small business in need of a one-time task or a large enterprise looking for scalable freelance talent, Gigzera offers a solution that meets the demand for specialized services on a flexible, on-demand basis. </p>
-                    <p class="text-grey-600 text-lg">The technology behind Gigzera plays a pivotal role in its success. Leveraging cloud computing, artificial intelligence, and advanced algorithms, Gigzera is able to quickly match employers with freelancers based on criteria such as skill set, location, and availability. This efficient matching process reduces hiring time, providing employers with fast access to top talent. For freelancers, Gigzera offers the freedom to choose projects that align with their skills and interests, enabling them to manage their own schedules and work-life balance.
-                    <p class="text-grey-600 text-lg">Moreover, Gigzera ensures a seamless experience for both freelancers and employers. The platform streamlines the hiring process, facilitates secure payments, and provides built-in communication tools to foster smooth interactions between all parties. This digital infrastructure allows both freelancers and clients to work together efficiently, without the administrative burdens typically associated with traditional hiring processes.
-                    <p class="text-grey-600 text-lg">In conclusion, Gigzera represents the future of work, offering an efficient, flexible, and technology-driven platform that connects businesses with skilled freelancers across various industries. As the gig economy continues to expand, Gigzera stands at the forefront of this transformation, creating new opportunities for both workers and employers in an increasingly digital and interconnected world
-            </p>
-
-
-
+            <!-- Search Bar -->
+            <div class="search-bar">
+              <input
+                type="text"
+                placeholder="Search jobs by skills or category..."
+                class="search-input"
+              />
+              <button class="search-button">Search</button>
             </div>
-            <div class="features">  
-                <div class="feature">  
-                    <h2 class="section-title">Efficient Matching</h2>  
-                    <p>Automated matching system connects you with the perfect talent.</p>  
-                </div>  
-                <div class="feature">  
-                    <h2 class="section-title">Flexible Hiring</h2>  
-                    <p>Choose from various hiring models that suit your needs.</p>  
-                </div>  
-                <div class="feature">  
-                    <h2 class="section-title">Collaboration</h2>  
-                    <p>Built-in tools for seamless team collaboration.</p>  
-                </div>  
-                <div class="feature">  
-                    <h2 class="section-title">Secure Payments</h2>  
-                    <p>Protected transactions and milestone-based payments.</p>  
-                </div>  
-            </div>  
-      
-            <!-- <h3 style="text-align: center;">Our Technology Stack</h3>   -->
-        </section>
+            <!-- Navigation Links -->
+            <div class="nav-links">
+              <a href="../index.html">Home</a>
+              <a href="./findajob.html">Jobs</a>
+              <a href="./AboutUs.html">About Us</a>
+              <a href="javascript:void(0);" id="contactBtn">Contact Us</a>
+              <a href="./industries.html">Industries</a>
+
+              <button
+                class="login-btn"
+                onclick="window.location.href='./Html/login.html';"
+              >
+                Login
+              </button>
+              <button
+                class="signup-btn"
+                onclick="window.location.href='/Html/signup.html';"
+              >
+                Sign Up
+              </button>
+            </div>
+          </nav>
+        </header>
+      </section>
+
+      <section>
+        <!-- <h1 style="font-size: 3.5rem; font-weight: bold; text-align: center; margin: 10px 0;">Gigzera: A Technology-Driven GigWorks Platform</h1> -->
+        <h3
+          style="
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 0;
+          "
+        >
+          Gigzera: A Technology-Driven GigWorks Platform
+        </h3>
+
+        <p></p>
+        <p class="text-gray-600 text-lg">
+          In the modern workforce, the traditional employment model is
+          undergoing a transformation, largely driven by technological
+          innovations. One of the most significant shifts in this evolution is
+          the rise of gig work, where individuals take on short-term, flexible
+          jobs facilitated through online platforms. Gigzera is one such
+          technology-driven GigWorks platform, designed to connect businesses
+          and individuals with a vast network of skilled freelancers for various
+          tasks and projects.
+        </p>
+        <p class="text-grey-600 text-lg">
+          Gigzera operates as a dynamic marketplace, utilizing cutting-edge
+          technology to provide businesses with access to freelancers across a
+          wide array of industries. Through its mobile app and website, Gigzera
+          enables users to find and hire talented professionals for projects
+          ranging from software development and digital marketing to content
+          creation and graphic design. Whether you're a small business in need
+          of a one-time task or a large enterprise looking for scalable
+          freelance talent, Gigzera offers a solution that meets the demand for
+          specialized services on a flexible, on-demand basis.
+        </p>
+        <p class="text-grey-600 text-lg">
+          The technology behind Gigzera plays a pivotal role in its success.
+          Leveraging cloud computing, artificial intelligence, and advanced
+          algorithms, Gigzera is able to quickly match employers with
+          freelancers based on criteria such as skill set, location, and
+          availability. This efficient matching process reduces hiring time,
+          providing employers with fast access to top talent. For freelancers,
+          Gigzera offers the freedom to choose projects that align with their
+          skills and interests, enabling them to manage their own schedules and
+          work-life balance.
+        </p>
+        <p class="text-grey-600 text-lg">
+          Moreover, Gigzera ensures a seamless experience for both freelancers
+          and employers. The platform streamlines the hiring process,
+          facilitates secure payments, and provides built-in communication tools
+          to foster smooth interactions between all parties. This digital
+          infrastructure allows both freelancers and clients to work together
+          efficiently, without the administrative burdens typically associated
+          with traditional hiring processes.
+        </p>
+        <p class="text-grey-600 text-lg">
+          In conclusion, Gigzera represents the future of work, offering an
+          efficient, flexible, and technology-driven platform that connects
+          businesses with skilled freelancers across various industries. As the
+          gig economy continues to expand, Gigzera stands at the forefront of
+          this transformation, creating new opportunities for both workers and
+          employers in an increasingly digital and interconnected world
+        </p>
+
+        <div class="features">
+          <div class="feature">
+            <h2 class="section-title">Efficient Matching</h2>
+            <p>
+              Automated matching system connects you with the perfect talent.
+            </p>
+          </div>
+          <div class="feature">
+            <h2 class="section-title">Flexible Hiring</h2>
+            <p>Choose from various hiring models that suit your needs.</p>
+          </div>
+          <div class="feature">
+            <h2 class="section-title">Collaboration</h2>
+            <p>Built-in tools for seamless team collaboration.</p>
+          </div>
+          <div class="feature">
+            <h2 class="section-title">Secure Payments</h2>
+            <p>Protected transactions and milestone-based payments.</p>
+          </div>
+        </div>
+
+        <!-- <h3 style="text-align: center;">Our Technology Stack</h3>   -->
+      </section>
+
+      <section>
         <h3 class="technology-stack-title">Our Technology Stack</h3>
 
-            <div class="flex-container">  
-                <div class="for-employers">  
-                    <h4 style="text-align: center;">For Employers</h4>  
-                    <ul style="list-style-type: none; padding: 0;">  
-                        <li><img src="https://cdn.yellowmessenger.com/uwdNDGWhNm0g1734254322027.jpeg" alt="Rocket Icon" style="width: 16px; height: 16px; margin-right: 8px;">70% faster hiring process</li>  
-                        <li><img src="https://cdn.yellowmessenger.com/hOXmJHfIkBFF1734254909005.jpg" alt="Globe Icon" style="width: 16px; height: 16px; margin-right: 8px;">Connect with worldwide Developers</li>  
-                        <li><img src="https://cdn.yellowmessenger.com/Dp8JJUQlo4Kw1734254777886.jpeg" alt="Analytics Icon" style="width: 16px; height: 16px; margin-right: 8px;">Real-time analytics dashboard</li>  
-                    </ul>  
-                </div>  
-                
-                <div class="for-freelancers">  
-                    <h4 style="text-align: center;">For Freelancers</h4>  
-                    <ul style="list-style-type: none; padding: 0;">  
-                        <li><img src="https://cdn.yellowmessenger.com/Tvxni6nEKrc01734255062862.jpeg" alt="Calendar Icon" style="width: 16px; height: 16px; margin-right: 8px;">Flexible scheduling</li>  
-                        <li><img src="https://cdn.yellowmessenger.com/Yg9eE4feyRQb1734255260172.jpeg" alt= "Payment Icon" style="width: 16px; height: 16px; margin-right: 8px;">Instant payment processing</li>  
-                        <li><img src="https://cdn.yellowmessenger.com/Tta5dV4Pttxp1734255347164.jpeg" alt="Star Icon" style="width: 16px; height: 16px; margin-right: 8px;">Skills advancement projects</li>  
-                    </ul>  
-                </div>  
+        <div class="flex-container">
+          <div class="for-employers">
+            <h4 style="text-align: center">For Employers</h4>
+            <ul style="list-style-type: none; padding: 0">
+              <li>
+                <img
+                  src="https://cdn.yellowmessenger.com/uwdNDGWhNm0g1734254322027.jpeg"
+                  alt="Rocket Icon"
+                  style="width: 16px; height: 16px; margin-right: 8px"
+                />70% faster hiring process
+              </li>
+              <li>
+                <img
+                  src="https://cdn.yellowmessenger.com/hOXmJHfIkBFF1734254909005.jpg"
+                  alt="Globe Icon"
+                  style="width: 16px; height: 16px; margin-right: 8px"
+                />Connect with worldwide Developers
+              </li>
+              <li>
+                <img
+                  src="https://cdn.yellowmessenger.com/Dp8JJUQlo4Kw1734254777886.jpeg"
+                  alt="Analytics Icon"
+                  style="width: 16px; height: 16px; margin-right: 8px"
+                />Real-time analytics dashboard
+              </li>
+            </ul>
+          </div>
+
+          <div class="for-freelancers">
+            <h4 style="text-align: center">For Freelancers</h4>
+            <ul style="list-style-type: none; padding: 0">
+              <li>
+                <img
+                  src="https://cdn.yellowmessenger.com/Tvxni6nEKrc01734255062862.jpeg"
+                  alt="Calendar Icon"
+                  style="width: 16px; height: 16px; margin-right: 8px"
+                />Flexible scheduling
+              </li>
+              <li>
+                <img
+                  src="https://cdn.yellowmessenger.com/Yg9eE4feyRQb1734255260172.jpeg"
+                  alt="Payment Icon"
+                  style="width: 16px; height: 16px; margin-right: 8px"
+                />Instant payment processing
+              </li>
+              <li>
+                <img
+                  src="https://cdn.yellowmessenger.com/Tta5dV4Pttxp1734255347164.jpeg"
+                  alt="Star Icon"
+                  style="width: 16px; height: 16px; margin-right: 8px"
+                />Skills advancement projects
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <header>
+        <h1>Meet Our Team</h1>
+      </header>
+
+      <section class="team">
+        <div class="team-member">
+          <img
+            src="https://cdn.yellowmessenger.com/0TOE3iSV5Jno1734338145011.jpg"
+            alt="Hannah Wood"
+          />
+          <h2>Hannah Wood</h2>
+          <h3 class="title">Managing Director</h3>
+
+          <!-- <h3>Managing Director</h3>   -->
+          <p>
+            Hannah Wood is a strategic Managing Director with leadership
+            experience across multiple industries. Known for leading
+            organizational transformation, and delivering exceptional financial
+            performance. Adept at formulating and executing high-level
+            strategies, optimizing operations, and building strong relationships
+            with key stakeholders, including the board, employees, and clients.
+            Proven track record in steering companies through periods of change,
+            enhancing operational efficiency, and leading cross-functional teams
+            to achieve corporate objectives. With a deep understanding of
+            financial management, market dynamics, and risk mitigation, I
+            consistently align business goals with actionable solutions,
+            ensuring long-term success and sustainability.
+          </p>
+        </div>
+        <div class="team-member">
+          <img
+            src="https://cdn.yellowmessenger.com/M3rmp2fMwWma1734338421009.jpg"
+            alt="Vivek Samuel"
+          />
+          <h2>Vivek Samuel</h2>
+          <h3 class="title">Executive</h3>
+          <!-- <h3>Executive</h3>   -->
+          <p>
+            Vivek Samuel is a seasoned corporate executive with over 24 years of
+            leadership experience across diverse industries, known for driving
+            organizational growth, innovation, and operational excellence.
+            Proven expertise in strategic planning, financial management, and
+            team development, with a track record of achieving business goals
+            and maximizing profitability. Adept at leading cross-functional
+            teams, managing complex projects, and fostering strong stakeholder
+            relationships. Skilled in change management, corporate governance,
+            and risk mitigation, with a keen ability to navigate complex market
+            landscapes and deliver sustainable results. A visionary leader
+            committed to transforming business strategies and enhancing
+            organizational performance, while fostering a culture of
+            collaboration, accountability, and continuous improvement.
+          </p>
+        </div>
+        <div class="team-member">
+          <img
+            src="https://cdn.yellowmessenger.com/LVDJMdrhdLOK1734497574968.jpg"
+            alt="Silas Jude"
+          />
+          <h2>Silas Jude</h2>
+          <h3 class="title">Operations Manager</h3>
+
+          <!-- <h3>Operations Manager</h3>   -->
+          <p>
+            An accomplished professional specializing in operations management,
+            soft skills training, and administrative strategy. With a talent for
+            cultivating strong customer relationships and leading teams to
+            success, Bringing a results-driven approach to achieving
+            organizational growth. Dedicated to empowering businesses with
+            tailored solutions and impactful leadership.
+          </p>
+        </div>
+      </section>
+
+      <!-- footer section -->
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Left Column -->
+          <div class="footer-section">
+            <h3>Gigzera</h3>
+            <div class="social-icons">
+              <a href="#"
+                ><img
+                  src="https://cdn.yellowmessenger.com/e8xcBQpbzzRr1734333859137.png"
+                  alt="Twitter"
+              /></a>
+              <a href="#"
+                ><img
+                  src="https://cdn.yellowmessenger.com/WfLzQBeG9J1Y1734333882019.png"
+                  alt="Facebook"
+              /></a>
+              <a href="#"
+                ><img
+                  src="https://cdn.yellowmessenger.com/YB3cUpWmtnay1734334049773.png"
+                  alt="LinkedIn"
+              /></a>
             </div>
-        </section>  
+          </div>
 
-        <header>  
-            <h1>Meet Our Team</h1>  
-        </header>  
-        <section class="team">  
-            <div class="team-member">  
-                <img src="https://cdn.yellowmessenger.com/0TOE3iSV5Jno1734338145011.jpg" alt="Hannah Wood">  
-                <h2>Hannah Wood</h2>  
-             <h3 class="title">Managing Director</h3>
+          <!-- Middle Column -->
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Terms of Services</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
 
-                <!-- <h3>Managing Director</h3>   -->
-                <p> Hannah Wood is a strategic Managing Director with leadership experience across multiple industries. 
-                    Known for leading organizational transformation, and delivering exceptional financial performance. 
-                    Adept at formulating and executing high-level strategies, optimizing operations, and building strong relationships with key stakeholders, including the board, employees, and clients. 
-                    Proven track record in steering companies through periods of change, enhancing operational efficiency, and leading cross-functional teams to achieve corporate objectives. With a deep understanding of financial management, market dynamics, and risk mitigation, 
-                    I consistently align business goals with actionable solutions, ensuring long-term success and sustainability.</p>  
-            </div>  
-            <div class="team-member">  
-                <img src="https://cdn.yellowmessenger.com/M3rmp2fMwWma1734338421009.jpg" alt="Vivek Samuel">  
-                <h2>Vivek Samuel</h2>  
-                <h3 class="title">Executive</h3>
-                <!-- <h3>Executive</h3>   -->
-                <p>Vivek Samuel is a seasoned corporate executive with over 24 years of leadership experience across diverse industries, 
-                    known for driving organizational growth, innovation, and operational excellence. Proven expertise in strategic planning,
-                     financial management, and team development, with a track record of achieving business goals and maximizing profitability. 
-                     Adept at leading cross-functional teams, managing complex projects, and fostering strong stakeholder relationships. Skilled in change management,
-                      corporate governance, and risk mitigation, with a keen ability to navigate complex market landscapes and deliver sustainable results. 
-                      A visionary leader committed to transforming business strategies and enhancing organizational performance, while fostering a culture of collaboration, accountability, and continuous improvement.
-                </p>  
-            </div>  
-            <div class="team-member">  
-                <img src="https://cdn.yellowmessenger.com/LVDJMdrhdLOK1734497574968.jpg" alt="Silas Jude">  
-                <h2>Silas Jude</h2>  
-                <h3 class="title">Operations Manager</h3>
+          <!-- Right Column -->
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <ul>
+              <li>
+                <img
+                  src="https://cdn.yellowmessenger.com/efPnj3kZs4ZD1734334149930.png"
+                  alt="Email"
+                />
+                contact@gigzera.com
+              </li>
+              <li>
+                <img
+                  src="https://cdn.yellowmessenger.com/C5E8NYJUafSo1734333972796.jpg"
+                  alt="Phone"
+                />
+                8431134449
+              </li>
+              <li>
+                <img
+                  src="https://cdn.yellowmessenger.com/KJhNnG911X0i1734334030424.png"
+                  alt="Location"
+                />
+                006,Sprinkles, RGA Tech Park, Carmelaram, Kodathi, Sarjapur Rd,
+                Bengaluru Karnataka 560035
+              </li>
+            </ul>
+            <!-- Company Tag Line:  Tech it to the next level ! -->
+          </div>
+        </div>
 
-                <!-- <h3>Operations Manager</h3>   -->
-                <p>An accomplished professional specializing in operations management, soft skills training, and administrative strategy. With a talent for cultivating strong customer relationships and leading teams to success, Bringing a results-driven approach to achieving organizational growth. Dedicated to empowering businesses with tailored solutions and impactful leadership.</p>  
-            </div>  
-        </section>  
-
-        <!-- footer section -->  
-        <footer class="footer">  
-            <div class="footer-container">  
-                <!-- Left Column -->  
-                <div class="footer-section">  
-                    <h3>Gigzera</h3>  
-                    <div class="social-icons">  
-                        <a href="#"><img src="https://cdn.yellowmessenger.com/e8xcBQpbzzRr1734333859137.png" alt="Twitter"></a>  
-                        <a href="#"><img src="https://cdn.yellowmessenger.com/WfLzQBeG9J1Y1734333882019.png" alt="Facebook"></a>  
-                        <a href="#"><img src="https://cdn.yellowmessenger.com/YB3cUpWmtnay1734334049773.png" alt="LinkedIn"></a>  
-                    </div>  
-                </div>  
-
-                <!-- Middle Column -->  
-                <div class="footer-section">  
-                    <h4>Company</h4>  
-                    <ul>  
-                        <li><a href="#">About Us</a></li>  
-                        <li><a href="#">Help Center</a></li>  
-                        <li><a href="#">Terms of Services</a></li>  
-                        <li><a href="#">Privacy Policy</a></li>  
-                        <li><a href="#">Contact Us</a></li>  
-                    </ul>  
-                </div>  
-
-                <!-- Right Column -->  
-                <div class="footer-section">  
-                    <h4>Contact</h4>  
-                    <ul>  
-                        <li><img src="https://cdn.yellowmessenger.com/efPnj3kZs4ZD1734334149930.png" alt="Email"> contact@gigzera.com</li>  
-                        <li><img src="https://cdn.yellowmessenger.com/C5E8NYJUafSo1734333972796.jpg" alt="Phone"> 8431134449</li>  
-                        <li><img src="https://cdn.yellowmessenger.com/KJhNnG911X0i1734334030424.png" alt="Location"> 006,Sprinkles, RGA Tech Park, Carmelaram, Kodathi, Sarjapur Rd, Bengaluru Karnataka 560035</li>  
-                    </ul> 
-                    <!-- Company Tag Line:  Tech it to the next level ! -->
-                </div>  
-            </div>  
-
-            <div class="footer-bottom">  
-                <p>© 2025 Gigzera. All rights reserved.</p>  
-            </div>  
-        </footer>   
-    </main>  
-</body>  
+        <div class="footer-bottom">
+          <p>© 2025 Gigzera. All rights reserved.</p>
+        </div>
+      </footer>
+    </main>
+  </body>
 </html>
