@@ -259,6 +259,7 @@ h1, h2 {
     background: #f4f6f8;
     padding: 20px;
     border-radius: 8px;
+
     position: relative; /* For positioning the dots menu */
 }
 
@@ -268,6 +269,7 @@ h1, h2 {
     align-items: center;
     margin-bottom: 20px;
 }
+
 
 /* Profile Image */
 .profile-img-container {
@@ -294,6 +296,7 @@ h1, h2 {
 .profile-details h3 {
     font-size: 22px;
     margin-bottom: 5px;
+
 }
 
 .profile-details p {
@@ -380,11 +383,14 @@ h1, h2 {
 
 .save-btn:hover {
     background-color: #0056b3;
+
 }
 
-/* Editable Box Styling */
-.editable-box {
+/* Edit Profile Form Styling (Hidden by default) */
+#edit-profile-form {
+    display: none;
     background-color: #f4f6f8;
+
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -414,6 +420,7 @@ h1, h2 {
 
 #edit-profile-form .edit-section {
     margin-bottom: 20px;
+
 }
 
 /* Save Button inside Edit Profile Form */
@@ -426,6 +433,7 @@ h1, h2 {
     margin-top: 10px;
     float: right; /* Align to the right */
 }
+
 
 #summary-input {
     width: 100%;
@@ -465,6 +473,7 @@ h1, h2 {
     font-size: 16px;
     font-weight: bold;
 }
+
 
 .cloud-icon {  
     font-size: 40px; /* Adjust size of the icon */  

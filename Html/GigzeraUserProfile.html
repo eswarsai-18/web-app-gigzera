@@ -17,7 +17,9 @@
             <input type="text" placeholder="Search jobs by skills or category...">
         </div>
         <nav class="nav-links">
+
             <a href="index.html">Home</a>
+
                     <a href="/Html/applyforjob.html">Jobs</a>
                     <a href="/Html/AboutUs.html">About Us</a>
                     <a href="/Html/contactuspopup.html">Contact Us</a>
@@ -96,6 +98,7 @@
                         </div>
                     </div>
                 </div>
+
 <!-- Employment History -->
             <div class="section">
                 <h2>Employment History</h2>
@@ -132,6 +135,7 @@
                 <p id="profile-job">Senior Business Analyst</p>
             </div>
         </div>
+
         <!-- Profile Contact Details (Email, Phone) -->
         <div class="profile-contact">
             <p id="profile-email">
@@ -150,6 +154,7 @@
                 <span class="star selected" data-value="3">&#9733;</span>
                 <span class="star" data-value="4">&#9733;</span>
                 <span class="star" data-value="5">&#9733;</span>
+
             </div>
             <span id="rating-points">(3.0 points)</span> <!-- Points display -->
         </div>
@@ -179,6 +184,7 @@
             <label>Edit Email:</label>
             <input type="email" id="edit-email" value="john.doe@example.com">
         </div>
+
         <div>
             <label>Edit Phone:</label>
             <input type="text" id="edit-phone" value="+1 (555) 123-4567">
@@ -358,6 +364,7 @@ function handleFileSelect(event) {
             }
         }
 
+
         // Function to delete the uploaded file
         function deleteFile() {
             uploadedFile = null;
@@ -455,7 +462,9 @@ function selectSkill(skill) {
     const skillsList = document.getElementById('skills-list');
     const newSkill = document.createElement('span');
     newSkill.className = 'skill-box';
+
     newSkill.innerHTML = `${skill} <span class="delete-skill" onclick="removeSkill(this)">✖</span>`;
+
     skillsList.appendChild(newSkill);
 
     document.getElementById('new-skill').value = '';
@@ -466,6 +475,7 @@ function selectSkill(skill) {
 function removeSkill(skillElement) {
     skillElement.parentElement.remove();
 }
+
 
     </script>
 </body>
