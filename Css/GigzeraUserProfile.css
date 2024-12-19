@@ -259,6 +259,8 @@ h1, h2 {
     background: #f4f6f8;
     padding: 20px;
     border-radius: 8px;
+
+    position: relative; /* For positioning the dots menu */
 }
 
 /* Profile Header - Profile Image and Name/Job Title Side by Side */
@@ -267,6 +269,7 @@ h1, h2 {
     align-items: center;
     margin-bottom: 20px;
 }
+
 
 /* Profile Image */
 .profile-img-container {
@@ -293,6 +296,7 @@ h1, h2 {
 .profile-details h3 {
     font-size: 22px;
     margin-bottom: 5px;
+
 }
 
 .profile-details p {
@@ -341,28 +345,18 @@ h1, h2 {
     color: #ffbf00;
 }
 
-/* Edit Button Style */
-.edit-btn-container {
-    text-align: right;
-    margin-top: 15px;
-}
-
-.small-btn.edit-btn {
-    background-color: transparent;
-    border: none;
-    font-size: 18px;
-    color: #007bff;
+/* Three Dots Menu - for Edit Profile */
+.dots-menu {
+    position: absolute;
+    top: 10px; /* Adjust position for better visibility */
+    right: 10px;
     cursor: pointer;
-    display: inline-flex;
-    align-items: center;
+    font-size: 24px; /* Increased size for better visibility */
+    color: black; /* Set color to black */
 }
 
-.small-btn.edit-btn span {
-    margin-left: 5px;
-}
-
-.small-btn.edit-btn:hover {
-    color: #0056b3;
+.dots-menu:hover {
+    color: #555; /* Slightly lighter color on hover */
 }
 
 /* Edit Profile Form for Name, Job Title, and Contact Details */
@@ -389,31 +383,17 @@ h1, h2 {
 
 .save-btn:hover {
     background-color: #0056b3;
+
 }
 
-/* Editable Box Styling */
-.editable-box {
+/* Edit Profile Form Styling (Hidden by default) */
+#edit-profile-form {
+    display: none;
     background-color: #f4f6f8;
+
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 20px;
-}
-
-/* Edit Button inside Editable Box */
-.small-btn.edit-btn {
-    background-color: white;
-    color: #007bff;
-    border: 2px solid #007bff;
-    padding: 5px 10px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.small-btn.edit-btn:hover {
-    background-color: #007bff;
-    color: white;
 }
 
 /* Hidden file input for image upload */
@@ -440,6 +420,7 @@ h1, h2 {
 
 #edit-profile-form .edit-section {
     margin-bottom: 20px;
+
 }
 
 /* Save Button inside Edit Profile Form */
@@ -452,6 +433,7 @@ h1, h2 {
     margin-top: 10px;
     float: right; /* Align to the right */
 }
+
 
 #summary-input {
     width: 100%;
@@ -470,6 +452,7 @@ h1, h2 {
     font-size: 18px;
     color: #888;
 }
+
 
 /* Portfolio Section */
 .upload-area {  
@@ -490,6 +473,7 @@ h1, h2 {
     font-size: 16px;
     font-weight: bold;
 }
+
 
 .cloud-icon {  
     font-size: 40px; /* Adjust size of the icon */  
